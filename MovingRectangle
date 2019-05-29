@@ -1,0 +1,33 @@
+color c = color(255,0,0);
+float x = 0;
+float y = 100;
+float speed = 1;
+
+void setup() {
+  size(400,400);
+}
+
+void draw() {
+  background(255);
+line(width/2,height/2,width,height);
+  x = x+ speed;
+if(x > width) x = 0;
+
+fill(c);
+rect(x,y,50,50);
+//rectMode(CORNERS);
+rect(0,0,30,30);
+
+}
+
+void move() {
+  x = x + speed;
+  if (x > width) {
+    x = 0;
+  }
+}
+
+void display() {
+  fill(c);
+  rect(x,y,30,10);
+}
